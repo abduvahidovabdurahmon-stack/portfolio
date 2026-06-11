@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abi — Designer &amp; Brand Strategist | Visual Portfolio</title>
+  
+  <!-- Meta tags for SEO -->
+  <meta name="description" content="Портфолио Аби (Abi) — графического дизайнера и бренд-стратега из Ташкента. Создание бренд-систем, айдентики, SMM-дизайна и motion graphics. Визуал, который работает.">
+  <meta name="keywords" content="Аби, Abi, Дизайнер Ташкент, Графический дизайн, Айдентика, Брендинг, SMM дизайн, Motion graphics, Ташкент, Узбекистан">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abi — Designer &amp; Brand Strategist | Visual Portfolio">
+  <meta property="og:description" content="Портфолио Аби (Abi). Создание бренд-систем, айдентики и motion graphics. Визуал, который работает.">
+  <meta property="og:image" content="https://claude.ai/images/claude_ogimage.png">
+
+  <!-- Google Fonts: Syne (bold/expressive), Plus Jakarta Sans (interface text), Space Grotesk (tech numbers/labels), Playfair Display (light theme serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="style.css?v=1.8.3">
+</head>
+<body>
+
+  <!-- Noise Overlay (For paper texture feel in light theme) -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">
+    <span class="cursor-text">View</span>
+  </div>
+
+  <!-- Background Grid, Light Rays, and Orbs -->
+  <div class="background-grid" aria-hidden="true">
+    <div class="bg-base-color"></div>
+
+
+    <!-- Full-screen Frosted Glass Surface Overlay -->
+    <div class="bg-glass-surface"></div>
+
+    <!-- Interactive Background Lights & Matrix Grid (On top of glass for sharpness) -->
+    <div class="interactive-glow-spotlight"></div>
+    <div class="interactive-grid-overlay"></div>
+
+    <div class="grid-columns">
+      <div class="grid-col"></div>
+      <div class="grid-col"></div>
+      <div class="grid-col"></div>
+      <div class="grid-col"></div>
+      <div class="grid-col"></div>
+    </div>
+  </div>
+
+
+
+  <!-- Frosted Glass Navigation Bar -->
+  <header class="navigation-wrapper" id="nav-header">
+    <div class="navigation-inside">
+      <a href="#home" class="nav-logo" id="logo-link" aria-label="ABI Home">
+        <svg viewBox="0 0 185 125" aria-hidden="true" class="logo-svg">
+          <path d="M 35 60 L 65 60 L 65 120 L 35 120 A 30 30 0 0 1 35 60 Z M 35 75 A 15 15 0 1 0 35 105 A 15 15 0 1 0 35 75 Z" fill-rule="evenodd" />
+          <path d="M 80 30 L 95 30 L 95 60 L 110 60 A 30 30 0 0 1 110 120 L 80 120 Z M 110 75 A 15 15 0 1 0 110 105 A 15 15 0 1 0 110 75 Z" fill-rule="evenodd" />
+          <rect x="155" y="60" width="15" height="60" />
+          <path d="M 162.5 5 Q 161.5 32 147.5 40 Q 161.5 48 162.5 55 Q 163.5 48 177.5 40 Q 163.5 32 162.5 5 Z" />
+        </svg>
+      </a>
+      
+      <nav class="navigation-links hide-on-mobile" aria-label="Основное меню">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#works" class="nav-link">Works</a>
+        <a href="#pricing" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      
+      <div class="navigation-actions">
+        <!-- Theme Toggle Switch -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Переключить цветовую тему">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="magnetic-button button-navigation hide-on-mobile" id="nav-cta-btn">
+          <span class="btn-text">Связаться</span>
+          <div class="btn-circle">
+            <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </div>
+        </a>
+        
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-menu-trigger hide-on-desktop" id="menu-trigger" aria-label="Открыть мобильное меню" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <div class="mobile-menu-content">
+      <nav class="mobile-navigation-links" aria-label="Мобильное меню">
+        <a href="#home" class="mobile-nav-link">Home</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#works" class="mobile-nav-link">Works</a>
+        <a href="#pricing" class="mobile-nav-link">Services</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="#contact" class="magnetic-button mobile-cta-btn">Связаться</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="main-content">
+    
+    <!-- Centered Editorial Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="section-container">
+        
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <div class="title-row">
+              <span class="hero-title-word-wrapper"><span class="hero-title-word">Визуал</span></span>
+              <span class="hero-title-word-wrapper"><span class="hero-title-word stroke">который</span></span>
+            </div>
+            <div class="title-row">
+              <span class="hero-title-word-wrapper"><span class="hero-title-word gradient-text italic-accent">работает.</span></span>
+            </div>
+          </h1>
+          <p class="hero-subtitle">Графический дизайнер &amp; Бренд-стратег. Создаю сильные бренд-системы, продуманную айдентику, SMM-дизайн и motion graphics.</p>
+          
+          <div class="hero-actions">
+            <a href="#works" class="magnetic-button btn-hero-primary">
+              <span class="btn-text">Смотреть работы</span>
+              <div class="btn-circle">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </div>
+            </a>
+            <a href="#contact" class="btn-text-action">Обсудить проект &rarr;</a>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Marquee divider 1 (between Hero and About) -->
+    <div class="scroll-marquee-wrapper" aria-hidden="true">
+      <div class="scroll-marquee-track marquee-track-1">
+        <div class="scroll-marquee-item font-tech">ABI DESIGN &bull; BRAND SYSTEM &bull; VISUAL IDENTITY &bull; MOTION CREATIVE &bull; DIRECTION &bull; ABI DESIGN &bull; BRAND SYSTEM &bull; VISUAL IDENTITY &bull; MOTION CREATIVE &bull; DIRECTION &bull;</div>
+      </div>
+    </div>
+
+    <!-- About and Process Section -->
+    <section class="about-section" id="about" data-animate="about">
+      <div class="section-container">
+        <div class="section-header" style="position: relative;">
+          <span class="section-tag font-tech">/ About &amp; Process</span>
+          <h2 class="section-title">Дизайн с <em>умыслом</em></h2>
+          <div class="bg-section-number font-tech" data-parallax-speed="0.12">01</div>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-text-col">
+            <p class="paragraph-large">Я специализируюсь на брендинге, визуальной идентичности и motion design. Мой опыт включает работу как на фрилансе, так и в качестве штатного маркетолога.</p>
+            <p class="paragraph-regular">Мои довольные клиенты — <strong>AIST, Webster University, Wendy's UZ/KZ</strong>, в прошлом KAHWA Coffee, Perfetto Food, образовательные платформы и стартапы. Каждый проект для меня начинается со смысла и заканчивается измеримым результатом.</p>
+            
+            <div class="chips-container" style="margin-top: 30px;">
+              <div class="chips">
+                <span class="chip hi">Брендинг</span>
+                <span class="chip">Айдентика</span>
+                <span class="chip">SMM</span>
+                <span class="chip hi">Photoshop</span>
+                <span class="chip hi">Illustrator</span>
+                <span class="chip">After Effects</span>
+                <span class="chip">Higgsfield AI</span>
+                <span class="chip hi">Midjourney</span>
+                <span class="chip">CorelDRAW</span>
+                <span class="chip">3ds Max</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="process-timeline-bento">
+            <div class="process-card border-glow">
+              <div class="process-num font-tech">01</div>
+              <h3 class="process-title">Брендинг и логотипы</h3>
+              <p class="process-desc">Создание запоминающихся знаков, подбор фирменных цветов и разработка брендбуков.</p>
+            </div>
+            
+            <div class="process-card border-glow">
+              <div class="process-num font-tech">02</div>
+              <h3 class="process-title">SMM &amp; Digital</h3>
+              <p class="process-desc">Instagram контент-стратегия, оформление обложек, Stories, Reels и шаблонов постов.</p>
+            </div>
+            
+            <div class="process-card border-glow">
+              <div class="process-num font-tech">03</div>
+              <h3 class="process-title">Motion &amp; AI</h3>
+              <p class="process-desc">Создание трендовых анимаций с внедрением передовых ИИ-инструментов (Higgsfield AI).</p>
+            </div>
+            
+            <div class="process-card border-glow">
+              <div class="process-num font-tech">04</div>
+              <h3 class="process-title">Print &amp; Outdoor</h3>
+              <p class="process-desc">Постеры, баннеры, дизайн упаковки, мерч и полное оформление ивентов под ключ.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Bento Section -->
+    <section class="skills-section" id="skills" data-animate="skills">
+      <div class="section-container">
+        <div class="section-header" style="position: relative;">
+          <span class="section-tag font-tech">/ Capabilities</span>
+          <h2 class="section-title">Навыки и дисциплины</h2>
+          <div class="bg-section-number font-tech" data-parallax-speed="0.12">02</div>
+        </div>
+        
+        <div class="skills-bento-grid">
+          <!-- Skill Card 1 -->
+          <div class="bento-card skill-card border-glow">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                <path d="M2 12h20"></path>
+              </svg>
+            </div>
+            <h3 class="skill-title">Брендинг &amp; Айдентика</h3>
+            <p class="skill-desc">Создание логотипов, брендбуков, правил типографики и руководств по фирменному стилю.</p>
+            <div class="skill-pills">
+              <span>Логотипы</span>
+              <span>Брендбуки</span>
+              <span>Фирменный стиль</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 2 -->
+          <div class="bento-card skill-card border-glow">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h3 class="skill-title">SMM &amp; Digital</h3>
+            <p class="skill-desc">Комплексная Instagram контент-стратегия, создание Stories, Reels, Highlights and шаблонов.</p>
+            <div class="skill-pills">
+              <span>Instagram</span>
+              <span>Reels</span>
+              <span>Highlight covers</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 3 -->
+          <div class="bento-card skill-card border-glow">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <h3 class="skill-title">Motion &amp; AI</h3>
+            <p class="skill-desc">Анимации в современных трендах, генерация визуалов и интеграция ИИ (Higgsfield AI, Midjourney) в пайплайн.</p>
+            <div class="skill-pills">
+              <span>Motion</span>
+              <span>Higgsfield AI</span>
+              <span>Generative AI</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 4 -->
+          <div class="bento-card skill-card border-glow">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="21" y1="12" x2="3" y2="12"></line>
+                <line x1="12" y1="3" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="skill-title">Tools &amp; Print</h3>
+            <p class="skill-desc">Профессиональная печатная верстка (постеры, баннеры, мерч) и знание инструментов Adobe, CorelDRAW, 3ds Max.</p>
+            <div class="skill-pills">
+              <span>Adobe Suite</span>
+              <span>CorelDRAW</span>
+              <span>3ds Max</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="works" data-animate="works">
+      
+      <!-- Horizontal Scroll Viewport Wrapper -->
+      <div class="projects-sticky-viewport">
+        <div class="section-container projects-sticky-header">
+          <div class="projects-header-wrapper">
+            <div class="section-header" style="position: relative;">
+              <span class="section-tag font-tech">/ Selected Works</span>
+              <h2 class="section-title">Избранные проекты</h2>
+              <div class="bg-section-number font-tech" data-parallax-speed="0.12">03</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="projects-horizontal-track" id="projects-horizontal-track">
+          <!-- Dynamically populated from JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee divider 2 (between Works and Pricing) -->
+    <div class="scroll-marquee-wrapper" aria-hidden="true">
+      <div class="scroll-marquee-track marquee-track-2">
+        <div class="scroll-marquee-item font-tech">ABI DESIGN &bull; BRAND SYSTEM &bull; VISUAL IDENTITY &bull; MOTION CREATIVE &bull; DIRECTION &bull; ABI DESIGN &bull; BRAND SYSTEM &bull; VISUAL IDENTITY &bull; MOTION CREATIVE &bull; DIRECTION &bull;</div>
+      </div>
+    </div>
+
+    <!-- Services & Pricing Section -->
+    <section class="pricing-section" id="pricing" data-animate="pricing">
+      <div class="section-container">
+        
+        <div class="section-header" style="position: relative;">
+          <span class="section-tag font-tech">/ Pricing &amp; Services</span>
+          <h2 class="section-title">Услуги и Тарифы</h2>
+          <p class="pricing-subtitle">Прозрачные цены и гибкий подход. Под каждый проект разрабатывается индивидуальная стратегия.</p>
+          <div class="bg-section-number font-tech" data-parallax-speed="0.12">04</div>
+        </div>
+
+        <div class="pricing-grid">
+          
+          <!-- Price Card 1 -->
+          <div class="pricing-card border-glow">
+            <div class="p-tier font-tech">Startage</div>
+            <div class="p-amount-wrap">
+              <span class="p-currency font-tech">$</span>
+              <h3 class="p-amount">50</h3>
+              <span class="p-period">/ проект</span>
+            </div>
+            <p class="p-desc">Для небольших точечных задач: рекламный макет, баннер, иконки, логотип или оформление сторис.</p>
+            <div class="p-divider"></div>
+            <ul class="p-features">
+              <li>1–3 финальных варианта</li>
+              <li>2 раунда правок</li>
+              <li>Сроки исполнения: 3–5 дней</li>
+              <li>Исходники в форматах AI / PSD</li>
+            </ul>
+            <a href="https://t.me/abiii_ll" target="_blank" rel="noopener" class="magnetic-button btn-pricing-action">
+              <span class="btn-text">Заказать в Telegram</span>
+            </a>
+          </div>
+
+          <!-- Price Card 2 (Featured) -->
+          <div class="pricing-card card-featured border-glow">
+            <div class="p-featured-badge font-tech">Популярный</div>
+            <div class="p-tier font-tech">Brand Package</div>
+            <div class="p-amount-wrap">
+              <span class="p-currency font-tech">$</span>
+              <h3 class="p-amount">500</h3>
+              <span class="p-period">/ проект</span>
+            </div>
+            <p class="p-desc">Комплексная визуальная разработка бренда — от фундаментальной айдентики до готовой SMM-системы.</p>
+            <div class="p-divider"></div>
+            <ul class="p-features">
+              <li>Логотип + подробный брендбук</li>
+              <li>Цветовая гамма, паттерны и шрифты</li>
+              <li>Instagram-оформление (обложки, шаблоны)</li>
+              <li>До 5 раундов правок</li>
+              <li>Сроки исполнения: 10–15 дней</li>
+              <li>Исходники всех векторных форматов</li>
+            </ul>
+            <a href="https://t.me/abiii_ll" target="_blank" rel="noopener" class="magnetic-button btn-pricing-action featured-action">
+              <span class="btn-text">Обсудить проект</span>
+            </a>
+          </div>
+
+          <!-- Price Card 3 -->
+          <div class="pricing-card border-glow">
+            <div class="p-tier font-tech">Full Service</div>
+            <div class="p-amount-wrap">
+              <span class="p-currency font-tech">$</span>
+              <h3 class="p-amount">1500</h3>
+              <span class="p-period">/ проект</span>
+            </div>
+            <p class="p-desc">Полное визуальное сопровождение вашего бизнеса: дизайн рекламы, motion, полиграфия и SMM под ключ.</p>
+            <div class="p-divider"></div>
+            <ul class="p-features">
+              <li>Всё из пакета Brand Package</li>
+              <li>Motion-графика (Reels, промо-видео)</li>
+              <li>Outdoor / Indoor рекламные макеты</li>
+              <li>3D-визуализация элементов (3ds Max)</li>
+              <li>Неограниченные раунды правок</li>
+              <li>Приоритетная связь 24/7</li>
+            </ul>
+            <a href="https://t.me/abiii_ll" target="_blank" rel="noopener" class="magnetic-button btn-pricing-action">
+              <span class="btn-text">Связаться в Telegram</span>
+            </a>
+          </div>
+
+        </div>
+        
+        <p class="pricing-custom-note">Нужен индивидуальный формат работы? <a href="https://t.me/abiii_ll" target="_blank" class="accent-link">Напишите мне в Telegram, обсудим детали →</a></p>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="contact" data-animate="contact">
+      <div class="section-container">
+        <div class="contact-layout">
+          
+          <div class="contact-info-col" style="position: relative;">
+            <span class="section-tag font-tech">/ Collaboration</span>
+            <h2 class="contact-main-title">Давай сделаем что-то <span class="gradient-text italic-accent">вместе.</span></h2>
+            <div class="bg-section-number font-tech" data-parallax-speed="0.12">05</div>
+            <p class="contact-text">Расскажи мне о своей задаче, бренде или проекте. Я проанализирую детали и отвечу тебе в течение нескольких часов.</p>
+            
+            <div class="contact-methods">
+              <a href="https://t.me/abiii_ll" target="_blank" rel="noopener" class="contact-method-link">
+                <span class="method-label font-tech">Telegram</span>
+                <span class="method-value">t.me/abiii_ll</span>
+              </a>
+              <a href="tel:+998200248444" class="contact-method-link">
+                <span class="method-label font-tech">Телефон</span>
+                <span class="method-value">+998 20 024 84 44</span>
+              </a>
+            </div>
+
+            <div class="socials-list">
+              <a href="https://behance.net" target="_blank" rel="noopener" class="social-link">Behance</a>
+              <a href="https://dribbble.com" target="_blank" rel="noopener" class="social-link">Dribbble</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+            </div>
+          </div>
+          
+          <div class="contact-form-col">
+            <form id="portfolio-contact-form" class="portfolio-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" id="contact-name" name="name" class="form-input" required placeholder=" ">
+                  <label for="contact-name" class="form-label">Ваше Имя</label>
+                  <span class="form-border"></span>
+                  <span class="error-msg">Пожалуйста, введите ваше имя</span>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="email" id="contact-email" name="email" class="form-input" required placeholder=" ">
+                  <label for="contact-email" class="form-label">Ваш Email / Telegram</label>
+                  <span class="form-border"></span>
+                  <span class="error-msg">Пожалуйста, укажите контакт для связи</span>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <textarea id="contact-message" name="message" class="form-input text-area" required placeholder=" "></textarea>
+                  <label for="contact-message" class="form-label">Расскажите о проекте</label>
+                  <span class="form-border"></span>
+                  <span class="error-msg">Пожалуйста, напишите пару слов о задаче</span>
+                </div>
+              </div>
+              
+              <button type="submit" class="magnetic-button form-submit-btn" id="submit-form-btn">
+                <span class="btn-text">Отправить сообщение</span>
+                <div class="btn-circle">
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </div>
+              </button>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="portfolio-footer">
+    <div class="section-container">
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Abi. Все права защищены.</p>
+        <div class="footer-logo">
+          <svg viewBox="0 0 185 125" aria-hidden="true" class="logo-svg">
+            <path d="M 35 60 L 65 60 L 65 120 L 35 120 A 30 30 0 0 1 35 60 Z M 35 75 A 15 15 0 1 0 35 105 A 15 15 0 1 0 35 75 Z" fill-rule="evenodd" />
+            <path d="M 80 30 L 95 30 L 95 60 L 110 60 A 30 30 0 0 1 110 120 L 80 120 Z M 110 75 A 15 15 0 1 0 110 105 A 15 15 0 1 0 110 75 Z" fill-rule="evenodd" />
+            <rect x="155" y="60" width="15" height="60" />
+            <path d="M 162.5 5 Q 161.5 32 147.5 40 Q 161.5 48 162.5 55 Q 163.5 48 177.5 40 Q 163.5 32 162.5 5 Z" />
+          </svg>
+        </div>
+        <p class="credits">Ташкент, Узбекистан</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Case Study Fullscreen Modal -->
+  <div class="case-study-modal" id="case-study-modal" role="dialog" aria-hidden="true">
+    <button class="modal-close-btn" id="modal-close" aria-label="Закрыть модальное окно">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    
+    <div class="modal-scroll-wrapper">
+      <div class="modal-container">
+        
+        <!-- Large Header Image/Visual -->
+        <div class="modal-hero-visual" id="modal-hero-visual">
+          <!-- Injected SVG/visual from script -->
+        </div>
+        
+        <div class="modal-content-grid">
+          
+          <div class="modal-info-sidebar">
+            <div class="meta-card">
+              <h3 class="meta-label">Client</h3>
+              <p class="meta-value" id="modal-meta-client">-</p>
+            </div>
+            <div class="meta-card">
+              <h3 class="meta-label">Role</h3>
+              <p class="meta-value" id="modal-meta-role">-</p>
+            </div>
+            <div class="meta-card">
+              <h3 class="meta-label">Year</h3>
+              <p class="meta-value font-tech" id="modal-meta-year">-</p>
+            </div>
+            <div class="meta-card">
+              <h3 class="meta-label">Tools</h3>
+              <div class="meta-pills" id="modal-meta-tools">
+                <!-- Pills injected -->
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-text-content">
+            <h1 class="modal-title" id="modal-title">-</h1>
+            <p class="modal-category font-tech" id="modal-category">-</p>
+            
+            <div class="case-block">
+              <h2 class="case-subheading">Проблема / Вызов</h2>
+              <p class="case-paragraph" id="modal-challenge">-</p>
+            </div>
+            
+            <div class="case-block">
+              <h2 class="case-subheading">Решение</h2>
+              <p class="case-paragraph" id="modal-solution">-</p>
+            </div>
+            
+            <!-- Designer details: Color Palette & Typography -->
+            <div class="case-block design-specs" id="modal-design-specs">
+              <h2 class="case-subheading">Палитра и Шрифты</h2>
+              <div class="specs-grid">
+                <div class="spec-colors-wrap">
+                  <p class="spec-mini-title">Colors (Click to copy)</p>
+                  <div class="color-palette" id="modal-color-palette">
+                    <!-- Dynamic colors -->
+                  </div>
+                </div>
+                <div class="spec-fonts-wrap">
+                  <p class="spec-mini-title">Typography</p>
+                  <div class="font-specs-list" id="modal-font-specs">
+                    <!-- Dynamic fonts -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Alternative specs: Brand Archive Ecosystem -->
+            <div class="case-block design-specs" id="modal-archive-specs" style="display: none;">
+              <h2 class="case-subheading">Креативный архив брендов</h2>
+              <div class="archive-grid" id="modal-archive-grid">
+              </div>
+            </div>
+            
+          </div>
+          
+        </div> <!-- End of modal grid -->
+
+        <!-- Graphic showcase container -->
+        <div class="case-block graphic-showcase" id="modal-graphic-showcase" style="display: none;">
+          <h2 class="case-subheading">Графические примеры</h2>
+          <div class="graphic-container" id="modal-graphic-container">
+            <!-- Dynamic images injected -->
+          </div>
+        </div>
+
+        <!-- Video showcase container -->
+        <div class="case-block video-showcase" id="modal-video-showcase" style="display: none;">
+          <h2 class="case-subheading">Motion примеры</h2>
+          <div class="video-container" id="modal-video-container">
+            <!-- Dynamic video element -->
+          </div>
+        </div>
+
+        <!-- Brandbook showcase container -->
+        <div class="case-block pdf-showcase" id="modal-pdf-showcase" style="display: none;">
+          <h2 class="case-subheading">Brandbook</h2>
+          <div class="pdf-container" id="modal-pdf-container" style="width: 100%; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); background-color: rgba(0, 0, 0, 0.3);">
+            <!-- Dynamic PDF iframe injected -->
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Overlay -->
+  <div class="image-lightbox" id="image-lightbox" role="dialog" aria-hidden="true">
+    <button class="lightbox-close-btn" id="lightbox-close" aria-label="Закрыть изображение">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Zoomed Graphic">
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="projects.js?v=1.8.3"></script>
+  <script src="script.js?v=1.8.3"></script>
+</body>
+</html>

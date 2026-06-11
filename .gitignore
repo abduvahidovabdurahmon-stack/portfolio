@@ -1,0 +1,6 @@
+# Ignore Photoshop design files (too large for GitHub)
+*.psd
+
+# Ignore agent helper directories
+.agent/
+scratch/
