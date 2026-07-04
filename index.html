@@ -319,81 +319,21 @@
 
     <!-- Projects Section -->
     <section class="projects-section" id="works" data-animate="works">
-      <div class="section-container">
-        
-        <div class="section-header" style="position: relative; margin-bottom: 20px;">
-          <span class="section-tag font-tech">/ Selected Works</span>
-          <h2 class="section-title">Избранные проекты</h2>
-          <div class="bg-section-number font-tech" data-parallax-speed="0.12">03</div>
+      
+      <!-- Horizontal Scroll Viewport Wrapper -->
+      <div class="projects-sticky-viewport">
+        <div class="section-container projects-sticky-header">
+          <div class="projects-header-wrapper">
+            <div class="section-header" style="position: relative;">
+              <span class="section-tag font-tech">/ Selected Works</span>
+              <h2 class="section-title">Избранные проекты</h2>
+              <div class="bg-section-number font-tech" data-parallax-speed="0.12">03</div>
+            </div>
+          </div>
         </div>
         
-        <!-- Premium Brand Grid Showcase -->
-        <div class="brand-grid">
-          <!-- AIST -->
-          <a href="project.html?id=aether" class="brand-card" data-brand="aist" data-animate="fade-up">
-            <div class="brand-logo-wrapper">
-              <span class="brand-logo-fallback" style="font-family: 'Syne', sans-serif; letter-spacing: -2px; font-weight: 800; font-size: 38px;">AIST</span>
-            </div>
-            <div class="brand-meta">
-              <span class="brand-title">AIST Tashkent</span>
-              <span class="brand-category">Production & Brand Identity</span>
-            </div>
-          </a>
-
-          <!-- Wendy's -->
-          <a href="project.html?id=veloce" class="brand-card" data-brand="wendys" data-animate="fade-up">
-            <div class="brand-logo-wrapper">
-              <span class="brand-logo-fallback" style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 600; font-size: 32px; color: #e21b2e;">Wendy's</span>
-            </div>
-            <div class="brand-meta">
-              <span class="brand-title">Wendy's Uzbekistan & Kazakhstan</span>
-              <span class="brand-category">SMM & Production Strategy</span>
-            </div>
-          </a>
-
-          <!-- WIUT & WUT -->
-          <a href="project.html?id=chronos" class="brand-card" data-brand="wiut" data-animate="fade-up">
-            <div class="brand-logo-wrapper">
-              <span class="brand-logo-fallback" style="font-family: 'Space Grotesk', sans-serif; letter-spacing: -1px; font-weight: 700; font-size: 28px; color: #002f6c;">WUT & WIUT</span>
-            </div>
-            <div class="brand-meta">
-              <span class="brand-title">Webster & Westminster</span>
-              <span class="brand-category">Event & Brand Identity</span>
-            </div>
-          </a>
-
-          <!-- Study Sphere -->
-          <a href="project.html?id=komorebi" class="brand-card" data-brand="studysphere" data-animate="fade-up">
-            <div class="brand-logo-wrapper">
-              <span class="brand-logo-fallback" style="font-family: 'Syne', sans-serif; letter-spacing: -1px; font-weight: 800; font-size: 26px; color: #6e44ff;">STUDY SPHERE</span>
-            </div>
-            <div class="brand-meta">
-              <span class="brand-title">Study Sphere</span>
-              <span class="brand-category">SMM & Identity Design</span>
-            </div>
-          </a>
-
-          <!-- Freelance (Sado) -->
-          <a href="project.html?id=sado" class="brand-card" data-brand="freelance" data-animate="fade-up">
-            <div class="brand-logo-wrapper">
-              <span class="brand-logo-fallback" style="font-family: 'Playfair Display', serif; font-weight: 400; font-size: 32px; letter-spacing: 2px;">SADO</span>
-            </div>
-            <div class="brand-meta">
-              <span class="brand-title">Sado Identity Archive</span>
-              <span class="brand-category">Freelance & Commercial Art</span>
-            </div>
-          </a>
-
-          <!-- AI-разработка -->
-          <a href="project.html?id=ai-dev" class="brand-card" data-brand="ai-dev" data-animate="fade-up">
-            <div class="brand-logo-wrapper">
-              <span class="brand-logo-fallback" style="font-family: 'Space Grotesk', sans-serif; font-weight: 400; font-size: 28px; letter-spacing: 4px; color: #10b981; text-transform: uppercase;">AI-DEV</span>
-            </div>
-            <div class="brand-meta">
-              <span class="brand-title">AI-Разработка</span>
-              <span class="brand-category">Generative Design & Coding</span>
-            </div>
-          </a>
+        <div class="projects-horizontal-track" id="projects-horizontal-track">
+          <!-- Dynamically populated from JS -->
         </div>
       </div>
     </section>
@@ -585,8 +525,134 @@
       </div>
     </div>
   </footer>
+
+  <!-- Case Study Fullscreen Modal -->
+  <div class="case-study-modal" id="case-study-modal" role="dialog" aria-hidden="true">
+    <button class="modal-close-btn" id="modal-close" aria-label="Закрыть модальное окно">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    
+    <div class="modal-scroll-wrapper">
+      <div class="modal-container">
+        
+        <!-- Large Header Image/Visual -->
+        <div class="modal-hero-visual" id="modal-hero-visual">
+          <!-- Injected SVG/visual from script -->
+        </div>
+        
+        <div class="modal-content-grid">
+          
+          <div class="modal-info-sidebar">
+            <div class="meta-card">
+              <h3 class="meta-label">Client</h3>
+              <p class="meta-value" id="modal-meta-client">-</p>
+            </div>
+            <div class="meta-card">
+              <h3 class="meta-label">Role</h3>
+              <p class="meta-value" id="modal-meta-role">-</p>
+            </div>
+            <div class="meta-card">
+              <h3 class="meta-label">Year</h3>
+              <p class="meta-value font-tech" id="modal-meta-year">-</p>
+            </div>
+            <div class="meta-card">
+              <h3 class="meta-label">Tools</h3>
+              <div class="meta-pills" id="modal-meta-tools">
+                <!-- Pills injected -->
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-text-content">
+            <h1 class="modal-title" id="modal-title">-</h1>
+            <p class="modal-category font-tech" id="modal-category">-</p>
+            
+            <div class="case-block">
+              <h2 class="case-subheading">Проблема / Вызов</h2>
+              <p class="case-paragraph" id="modal-challenge">-</p>
+            </div>
+            
+            <div class="case-block">
+              <h2 class="case-subheading">Решение</h2>
+              <p class="case-paragraph" id="modal-solution">-</p>
+            </div>
+            
+            <!-- Designer details: Color Palette & Typography -->
+            <div class="case-block design-specs" id="modal-design-specs">
+              <h2 class="case-subheading">Палитра и Шрифты</h2>
+              <div class="specs-grid">
+                <div class="spec-colors-wrap">
+                  <p class="spec-mini-title">Colors (Click to copy)</p>
+                  <div class="color-palette" id="modal-color-palette">
+                    <!-- Dynamic colors -->
+                  </div>
+                </div>
+                <div class="spec-fonts-wrap">
+                  <p class="spec-mini-title">Typography</p>
+                  <div class="font-specs-list" id="modal-font-specs">
+                    <!-- Dynamic fonts -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Alternative specs: Brand Archive Ecosystem -->
+            <div class="case-block design-specs" id="modal-archive-specs" style="display: none;">
+              <h2 class="case-subheading">Креативный архив брендов</h2>
+              <div class="archive-grid" id="modal-archive-grid">
+              </div>
+            </div>
+            
+          </div>
+          
+        </div> <!-- End of modal grid -->
+
+        <!-- Graphic showcase container -->
+        <div class="case-block graphic-showcase" id="modal-graphic-showcase" style="display: none;">
+          <h2 class="case-subheading">Графические примеры</h2>
+          <div class="graphic-container" id="modal-graphic-container">
+            <!-- Dynamic images injected -->
+          </div>
+        </div>
+
+        <!-- Video showcase container -->
+        <div class="case-block video-showcase" id="modal-video-showcase" style="display: none;">
+          <h2 class="case-subheading">Motion примеры</h2>
+          <div class="video-container" id="modal-video-container">
+            <!-- Dynamic video element -->
+          </div>
+        </div>
+
+        <!-- Brandbook showcase container -->
+        <div class="case-block pdf-showcase" id="modal-pdf-showcase" style="display: none;">
+          <h2 class="case-subheading">Brandbook</h2>
+          <div class="pdf-container" id="modal-pdf-container" style="width: 100%; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); background-color: rgba(0, 0, 0, 0.3);">
+            <!-- Dynamic PDF iframe injected -->
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Overlay -->
+  <div class="image-lightbox" id="image-lightbox" role="dialog" aria-hidden="true">
+    <button class="lightbox-close-btn" id="lightbox-close" aria-label="Закрыть изображение">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Zoomed Graphic">
+    </div>
+  </div>
+
   <!-- Scripts -->
-  <script src="projects.js?v=1.8.4"></script>
-  <script src="script.js?v=1.8.4"></script>
+  <script src="projects.js?v=1.8.3"></script>
+  <script src="script.js?v=1.8.3"></script>
 </body>
 </html>

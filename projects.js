@@ -227,37 +227,6 @@ const projects = [
     image: `<img src="freelance_card.jpg" alt="Freelance" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">`,
     mobileImage: `<img src="freelance_mobile_card.jpg" alt="Freelance" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">`,
     modalImage: `<img src="freelance_modal.jpg" alt="Freelance" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">`
-  },
-  {
-    id: "ai-dev",
-    title: "AI-разработка",
-    category: "Generative Design & Coding",
-    categoryClass: "branding",
-    shortDescription: "Создание визуального контента, видеоанимации и интерактивного кода с помощью искусственного интеллекта",
-    year: "2026",
-    role: "AI Developer / Prompt Engineer",
-    client: "AI Creative Studio",
-    tools: ["Midjourney", "Higgsfield AI", "Claude 3.5 Sonnet", "Kling AI", "Runway Gen-3", "HTML / Canvas"],
-    accentColor: "#10b981",
-    modalBg: "#064e3b",
-    forceDarkTheme: true,
-    colors: ["#10b981", "#064e3b", "#080a18", "#ffffff"],
-    fonts: ["Space Grotesk", "Syne"],
-    challenge: "Интегрировать современные генеративные модели (Midjourney, Higgsfield, Claude) в дизайн-пайплайны, чтобы сократить время прототипирования интерфейсов и создавать передовую трехмерную графику и анимацию за считанные часы.",
-    solution: "Внедрена методология быстрой генерации контента, позволяющая создавать целостную дизайн-систему на основе текстовых промптов. Разработаны скрипты автоматизации верстки и анимации через ИИ-ассистентов, позволяя реализовывать сложные интерактивные веб-эффекты.",
-    image: `<div style="width:100%; height:100%; background: linear-gradient(135deg, #10b981 0%, #064e3b 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-family:\'Space Grotesk\',sans-serif; font-size:24px; font-weight:700; letter-spacing:2px; border-radius:12px;">AI-DEV</div>`,
-    mobileImage: `<div style="width:100%; height:100%; background: linear-gradient(135deg, #10b981 0%, #064e3b 100%); display:flex; align-items:center; justify-content:center; color:#fff; font-family:\'Space Grotesk\',sans-serif; font-size:24px; font-weight:700; letter-spacing:2px; border-radius:12px;">AI-DEV</div>`,
-    modalImage: `<div style="width:100%; height:100%; background: linear-gradient(135deg, #10b981 0%, #064e3b 100%); display:flex; flex-direction:column; align-items:center; justify-content:center; color:#fff; font-family:\'Space Grotesk\',sans-serif; padding:60px; text-align:center; border-radius:12px; min-height:400px; gap: 15px;">
-                   <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5" style="filter: drop-shadow(0 0 12px rgba(16,185,129,0.5));">
-                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                     <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                     <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                   </svg>
-                   <span style="font-size: 32px; font-weight: 800; letter-spacing: 4px;">AI-DEVELOPMENT</span>
-                   <span style="font-size: 14px; opacity: 0.6; font-family: 'Space Grotesk', sans-serif;">Generative Design Sandbox &bull; 2026</span>
-                 </div>`,
-    videos: ["placeholder"],
-    graphicImages: ["placeholder"]
   }
 ];
 
