@@ -1516,8 +1516,8 @@ body.light-theme .skill-icon-wrap {
    ========================================================================== */
 .projects-section {
   position: relative;
-  height: 320vh; /* Horizontal scroll distance */
-  padding: 60px 0 0 0;
+  height: auto;
+  padding: 60px 0 80px 0;
 }
 
 .projects-sticky-viewport {
@@ -2048,11 +2048,18 @@ body.light-theme .btn-pricing-action.featured-action {
   padding: 10px 10px 10px 24px;
 }
 
+.form-submit-btn:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  pointer-events: none;
+}
+
 /* Success submit popups */
 .form-success-popup {
   position: fixed;
   bottom: 30px;
   right: 30px;
+  max-width: min(420px, calc(100vw - 40px));
   background: rgba(16, 185, 129, 0.15);
   border: 1px solid var(--accent-green);
   border-radius: 12px;
@@ -2085,6 +2092,7 @@ body.light-theme .form-success-popup {
   font-size: 13px;
   font-weight: 600;
   color: var(--text-primary);
+  line-height: 1.45;
 }
 
 /* ==========================================================================
@@ -4222,4 +4230,27 @@ body.project-detail-page.force-light-theme .color-swatch {
   }
 }
 
+@media (max-width: 480px) {
+  .form-success-popup {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    padding: 14px 16px;
+    align-items: flex-start;
+  }
+}
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}

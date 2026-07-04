@@ -304,13 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    
-    // ==========================================
-    // НАСТРОЙКИ TELEGRAM БОТА
-    const TELEGRAM_BOT_TOKEN = '8852043443:AAHdOig4C1iRScw8lx0Lc6LXiXQVmdwqqPE';
-    const TELEGRAM_CHAT_ID = '881414503';
-    // ==========================================
-    
+
     const nameInput = document.getElementById('contact-name');
     const emailInput = document.getElementById('contact-email');
     const messageInput = document.getElementById('contact-message');
@@ -342,46 +336,76 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = nameInput.value.trim();
       const contact = emailInput.value.trim();
       const message = messageInput.value.trim();
-      
+
+      const TELEGRAM_BOT_TOKEN = '8852043443:AAHdOig4C1iRScw8lx0Lc6LXiXQVmdwqqPE';
+      const TELEGRAM_CHAT_ID = '881414503';
+      const submitButton = document.getElementById('submit-form-btn');
+
       const escapeHTML = (str) => {
         return str.replace(/&/g, '&amp;')
                   .replace(/</g, '&lt;')
                   .replace(/>/g, '&gt;');
       };
-      
+
       const text = `🔔 <b>Новая заявка с портфолио!</b>\n\n` +
                    `👤 <b>Имя:</b> ${escapeHTML(name)}\n` +
                    `📞 <b>Контакт:</b> ${escapeHTML(contact)}\n\n` +
                    `💬 <b>Описание задачи:</b>\n${escapeHTML(message)}`;
 
-      if (TELEGRAM_BOT_TOKEN !== 'YOUR_BOT_TOKEN_HERE' && TELEGRAM_CHAT_ID !== 'YOUR_CHAT_ID_HERE') {
-        const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-        fetch(url, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            chat_id: TELEGRAM_CHAT_ID,
-            text: text,
-            parse_mode: 'HTML'
-          })
-        })
-        .catch(err => console.error('Ошибка сети при отправке в Telegram:', err));
+      if (submitButton) {
+        submitButton.disabled = true;
       }
 
-      showSuccessToast();
-      form.reset();
+      fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: TELEGRAM_CHAT_ID,
+          text,
+          parse_mode: 'HTML'
+        })
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Telegram request failed');
+          }
+          showSuccessToast('Сообщение отправлено. Я скоро отвечу.');
+          form.reset();
+        })
+        .catch(err => {
+          console.error('Ошибка сети при отправке в Telegram:', err);
+          showSuccessToast('Не получилось отправить автоматически. Напишите мне в Telegram напрямую.');
+        })
+        .finally(() => {
+          if (submitButton) {
+            submitButton.disabled = false;
+          }
+        });
     }
   });
 
-  const showSuccessToast = () => {
+  const showSuccessToast = (message = 'Готово!') => {
     const toast = document.createElement('div');
     toast.className = 'form-success-popup';
-    toast.innerHTML = `
-      <svg class="success-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" fill="none">
-        <polyline points="20 6 9 17 4 12"></polyline>
-      </svg>
-      <span class="success-text">Сообщение успешно отправлено!</span>
-    `;
+    toast.setAttribute('role', 'status');
+    toast.setAttribute('aria-live', 'polite');
+
+    const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    icon.classList.add('success-icon');
+    icon.setAttribute('viewBox', '0 0 24 24');
+    icon.setAttribute('stroke', 'currentColor');
+    icon.setAttribute('stroke-width', '2.5');
+    icon.setAttribute('fill', 'none');
+
+    const check = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+    check.setAttribute('points', '20 6 9 17 4 12');
+    icon.appendChild(check);
+
+    const textNode = document.createElement('span');
+    textNode.className = 'success-text';
+    textNode.textContent = message;
+
+    toast.append(icon, textNode);
     
     document.body.appendChild(toast);
     
